@@ -34,22 +34,48 @@ export const AddUser = ({addUser, active, setActive}) => {
           onSubmit={handleSubmit}
         >
           <label>Фамилия</label>
-          <input type="text" name="secondName" value={user.secondName} onChange={handleChange} required/>
+          <input
+            placeholder='Введите фамилию'
+            type="text"
+            name="secondName"
+            value={user.secondName}
+            onChange={handleChange} required/>
           <label>Имя</label>
-          <input type="text" name="primaryName" value={user.primaryName} onChange={handleChange} required/>
+          <input
+            placeholder='Введите имя'
+            type="text"
+            name="primaryName"
+            value={user.primaryName}
+            onChange={handleChange}
+            required/>
           <label>Отчество</label>
-          <input type="text" name="thirdName" value={user.thirdName} onChange={handleChange} required/>
+          <input
+            placeholder='Введите отчество'
+            type="text"
+            name="thirdName"
+            value={user.thirdName}
+            onChange={handleChange} required/>
           <label>E-mail</label>
-          <input type="email" name="email" value={user.email} onChange={handleChange} required/>
+          <input
+            placeholder='Введите электронную почту'
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleChange} required/>
           <label>Логин</label>
-          <input type="text" name="login" value={user.login} onChange={handleChange} required/>
+          <input
+            placeholder='Введите логин'
+            type="text"
+            name="login"
+            value={user.login} onChange={handleChange}
+            required/>
           <div className='form__actions'>
             <button
-              className={handleCheck() ? 'form__button' : 'form__button submit'}
-              type='submit'
+              className={handleCheck() ? 'form__button inactive' : 'form__button submit'}
               disabled={handleCheck()}
+              type='submit'
             >
-              Add new user
+              Создать
             </button>
           </div>
         </form>
