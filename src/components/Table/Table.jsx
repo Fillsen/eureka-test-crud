@@ -1,17 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Table.css'
 import {Modal} from "../Modal/Modal";
 
 export const Table = ({users, editRow, delUser, active, setActive, checkUser, modalId}) => {
 
   return (
-    <>
-      <Modal active={active} setActive={setActive}>
-        <button onClick={() => delUser(modalId)}>Удаляем?</button>
+    <div className='box'>
+      <Modal active={active} setActive={setActive} title={'Удаление пользователя'}>
+        <div className='modal__content'>
+          <div className='modal__delete'>Удалить выбранного пользователя?</div>
+          <div className='modal__actions'>
+            <button className='modal__button cancel' onClick={() => setActive({...active, del: false})}>Отменить
+            </button>
+            <button className='modal__button submit' onClick={() => delUser(modalId)}>Удалить</button>
+          </div>
+        </div>
       </Modal>
-      <table>
+      <table className='table'>
         <thead>
-        <tr>
+        <tr className='table columns'>
           <th>Фамилия</th>
           <th>Имя</th>
           <th>Отчество</th>
@@ -56,6 +63,6 @@ export const Table = ({users, editRow, delUser, active, setActive, checkUser, mo
         )}
         </tbody>
       </table>
-    </>
+    </div>
   )
 }

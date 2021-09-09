@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import {Table} from "./components/Table/Table";
 import {EditUser} from "./components/Forms/EditUser";
 import {AddUser} from "./components/Forms/AddUser";
+import './App.css'
 
 export const App = () => {
   // Init state
@@ -81,7 +82,6 @@ export const App = () => {
   }
 
   const checkUser = id => {
-    console.log(id)
     setModal({...modal, del: true, modalId: id})
   }
 
@@ -103,30 +103,33 @@ export const App = () => {
   }
 
   return (
-    <>
-      <AddUser
-        addUser={addUser}
-        active={modal.add}
-        setActive={setModal}
-      />
-      <Table
-        users={users}
-        setUsers={setUsers}
-        editRow={editRow}
-        delUser={delUser}
-        active={modal.del}
-        checkUser={checkUser}
-        modalId={modal.modalId}
-        setActive={setModal}
-      />
-      <EditUser
-        // edit={edit}
-        // setEdit={setEdit}
-        currentUser={currentUser}
-        updateUser={updateUser}
-        active={modal.edit}
-        setActive={setModal}
-      />
-    </>
+    <div className='app'>
+      <div className='navbar'/>
+      {/*<div className='sidebar'>Side</div>*/}
+      <div className='content'>
+        <AddUser
+          addUser={addUser}
+          active={modal.add}
+          setActive={setModal}
+        />
+
+        <Table
+          users={users}
+          setUsers={setUsers}
+          editRow={editRow}
+          delUser={delUser}
+          active={modal.del}
+          checkUser={checkUser}
+          modalId={modal.modalId}
+          setActive={setModal}
+        />
+        <EditUser
+          currentUser={currentUser}
+          updateUser={updateUser}
+          active={modal.edit}
+          setActive={setModal}
+        />
+      </div>
+    </div>
   );
 }

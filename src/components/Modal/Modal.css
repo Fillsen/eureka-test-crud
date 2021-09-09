@@ -19,7 +19,7 @@
 }
 
 .modal_content {
-    padding: 20px;
+    /*padding: 20px;*/
     border-radius: 12px;
     background-color: white;
     width: 50vw;
@@ -28,6 +28,26 @@
 }
 
 .modal_content.active {
+    background-color: #353D4B;
     transform: scale(1);
+}
 
+.modal_header {
+    padding: 22px;
+}
+
+.modal_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.modal_children {
+    padding: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0 0 12px 12px;
 }

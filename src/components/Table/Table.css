@@ -1,70 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 
-body {
-    font-family: "Quicksand", sans-serif;
+.box {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 0;
-    color: #4d4d4d;
 }
 
-#title {
-    text-align: center;
+.modal__content {
+
 }
 
-#users {
-    border-collapse: collapse;
-    border: 3px solid #ddd;
+.modal__delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 36px;
 }
 
-#users td,
-#users th {
-    padding: 12px;
+.modal__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#users tr:hover {
-    background-color: whitesmoke;
+.modal__button {
+    padding: 8px 48px 8px 48px;
+    border-radius: 6px;
 }
 
-#users th {
-    padding: 10px;
-    text-align: center;
-    background-color: white;
-    color: black;
+.submit {
+    background-color: #4587ED;
+    color: white;
 }
 
-.operation {
-    text-align: center;
-}
-
-.del {
-    outline: none;
-    font-size: 11px;
-    font-family: "Quicksand", sans-serif;
-    color: orangered;
-    padding: 3px 10px;
-    border: 1px solid orangered;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.del:active {
-    border: 1px solid blue;
-}
-
-.edit {
-    outline: none;
-    font-size: 11px;
-    font-family: "Quicksand", sans-serif;
-    color: cornflowerblue;
-    padding: 3px 10px;
-    border: 1px solid cornflowerblue;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.edit:active {
-    border: 1px solid blue;
+.cancel {
+    background-color: #E4E5E8;
 }
