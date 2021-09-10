@@ -105,14 +105,12 @@ export const App = () => {
   return (
     <div className='app'>
       <div className='navbar'/>
-      {/*<div className='sidebar'>Side</div>*/}
       <div className='content'>
         <AddUser
           addUser={addUser}
           active={modal.add}
           setActive={setModal}
         />
-
         <Table
           users={users}
           setUsers={setUsers}

@@ -5,7 +5,7 @@ import {Modal} from "../Modal/Modal";
 export const Table = ({users, editRow, delUser, active, setActive, checkUser, modalId}) => {
 
   return (
-    <div className='box'>
+    <>
       <Modal active={active} setActive={setActive} title={'Удаление пользователя'}>
         <div className='modal__content'>
           <div className='modal__delete'>Удалить выбранного пользователя?</div>
@@ -16,9 +16,9 @@ export const Table = ({users, editRow, delUser, active, setActive, checkUser, mo
           </div>
         </div>
       </Modal>
-      <table className='table'>
+      <table>
         <thead>
-        <tr className='table columns'>
+        <tr>
           <th>Фамилия</th>
           <th>Имя</th>
           <th>Отчество</th>
@@ -41,13 +41,10 @@ export const Table = ({users, editRow, delUser, active, setActive, checkUser, mo
                   onClick={() => {
                     editRow(user)
                   }}
-                  // onClick={() => setActive({...active, edit: true})}
-                  // className=""
                 >
                   Edit
                 </button>
                 <button
-                  // onClick={() => delUser(user.id)}
                   onClick={() => checkUser(user.id)}
                   className=""
                 >
@@ -58,11 +55,11 @@ export const Table = ({users, editRow, delUser, active, setActive, checkUser, mo
           ))
         ) : (
           <tr>
-            <td colSpan={3}>No users</td>
+            <td colSpan={3}>Таблица пуста</td>
           </tr>
         )}
         </tbody>
       </table>
-    </div>
+    </>
   )
 }
