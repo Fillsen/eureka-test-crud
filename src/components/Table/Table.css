@@ -38,17 +38,18 @@
 table {
     border-collapse: separate;
     border-spacing: 0 4px;
-    text-align: center;
+    text-align: left;
+    width: 85vw;
 }
 
 
 thead th {
-    padding: 8px 12px;
+    padding: 8px 15px;
     background-color: white;
 }
 
 td {
-    padding: 15px 20px;
+    padding: 15px 15px;
     background-color: white;
 }
 
